@@ -1,5 +1,3 @@
-/* src/styles/_base.scss */
-
 * {
   font-family: var(--font-family-base);
 }
@@ -20,7 +18,6 @@ h6 {
   margin-bottom: var(--spacing-sm);
 }
 
-/* These are great defaults for un-classed headings */
 h1 {
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);

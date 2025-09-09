@@ -90,7 +90,7 @@
 }
 .bg-app {
   background-color: var(--neutral-150) !important;
-} /* UPDATED: --neutral-50 -> --neutral-150 */
+}
 
 /* =================================== */
 /* Spacing Utilities (Margin & Padding)*/
@@ -281,8 +281,6 @@
   padding-right: var(--spacing-xxxl) !important;
 }
 
-
-/* Add individual directions (mt, mb, ms, me, pt, etc.) for all new sizes as needed */
 
 /* =================================== */
 /* Border & Shadow Utilities           */

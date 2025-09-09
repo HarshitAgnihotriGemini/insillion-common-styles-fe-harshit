@@ -1,8 +1,8 @@
 /* =================================== */
-/* App Layout & Structure Styles       */
+/* App Layout & Structure              */
 /* =================================== */
 .sidebar {
-  background: var(--neutral-150); /* UPDATED from non-existent --neutral-50 */
+  background: var(--neutral-150);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -40,11 +40,13 @@
 }
 
 /* =================================== */
-/* Style Guide Dashboard Card          */
+/* Reusable Components                 */
 /* =================================== */
+
+/* --- Dashboard Card --- */
 .style-card {
   display: flex;
-  padding: var(--font-size-lg) var(--spacing-lg); /* UPDATED from hardcoded 1.25rem 1.5rem */
+  padding: var(--font-size-lg) var(--spacing-lg);
   align-items: flex-start;
   gap: var(--spacing-sm);
   background: var(--white);
@@ -55,15 +57,45 @@
 }
 
 .style-card:hover {
-  transform: translateY(
-    calc(-1 * var(--spacing-xs))
-  ); /* UPDATED from hardcoded -4px */
+  transform: translateY(calc(-1 * var(--spacing-xs)));
 }
 
 .style-card-title {
   color: var(--neutral-900);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
+}
+
+/* --- Segmented Control (Toggle Group) --- */
+.ins-toggle-group {
+  display: inline-flex;
+  padding: 0.375rem;
+  gap: 0.375rem;
+  background-color: var(--neutral-150);
+  border-radius: var(--radius-default);
+}
+
+.ins-toggle-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 2.75rem;
+  padding: var(--spacing-sm) var(--font-size-xs);
+  border: none;
+  background-color: transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-700);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ins-toggle-item--active {
+  background-color: var(--white);
+  color: var(--blue-500);
+  box-shadow: var(--shadow-sm);
 }
 
 /* =================================== */
@@ -98,12 +130,12 @@
   width: 1rem;
   height: 1rem;
   background-color: var(--neutral-500);
+  -webkit-mask-image: var(--icon-to-display);
   mask-image: var(--icon-to-display);
   mask-repeat: no-repeat;
   mask-size: contain;
 }
 
-/* Helper classes that set WHICH icon to display */
 .input-icon.icon-user {
   --icon-to-display: var(--icon-user);
 }
@@ -114,12 +146,29 @@
   --icon-to-display: var(--icon-password);
 }
 
-.input-icon .form-control {
+.form-control {
   height: 3.5rem;
   background-color: var(--white);
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-default);
+}
+
+.input-icon .form-control {
   padding-left: 2.5rem;
+}
+
+.input-icon.icon-right::before {
+  left: auto;
+  right: var(--spacing-md);
+}
+
+.input-icon.icon-right .form-control {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+}
+
+.input-icon.icon-calendar {
+  --icon-to-display: var(--icon-calendar);
 }
 
 .form-control::placeholder {
@@ -145,43 +194,56 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-sm); /* For spacing icons and text */
+  gap: var(--spacing-sm);
   padding: 0 var(--spacing-lg);
-
   border: 1px solid transparent;
   border-radius: var(--radius-default);
-
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap;
 }
 
-/* --- Icon inside a button --- */
 .btn .btn-icon {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-/* --- Primary Button (Solid) --- */
+.btn-sm {
+  height: 2.75rem;
+  font-size: var(--font-size-sm);
+}
+.btn-md {
+  height: 3.5rem;
+  font-size: var(--font-size-base);
+}
+.btn-lg {
+  height: 4rem;
+  font-size: var(--font-size-lg);
+}
+
 .btn-primary {
   background-color: var(--blue-500);
   color: var(--white);
 }
-
 .btn-primary:hover {
   opacity: 0.9;
 }
 .btn-primary:focus {
   box-shadow: 0 0 0 3px var(--blue-100);
 }
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: rgba(var(--blue-500-rgb), 0.4);
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 1;
+  border: none;
+}
 
-/* --- Dark Button (Solid) --- */
-/* Your existing dark variant */
 .btn--dark {
   background-color: var(--blue-900);
   color: var(--white);
@@ -189,28 +251,6 @@
 .btn--dark:hover {
   opacity: 0.9;
 }
-
-/* --- outline Button (Outline) --- */
-.btn-outline {
-  background-color: transparent;
-  color: var(--blue-500);
-  border-color: var(--blue-500);
-}
-
-
-.btn-primary:disabled,
-.btn-primary[disabled] {
-  background-color: rgba(var(--blue-500-rgb), 0.4);
-  cursor: not-allowed;
-  /* Ensure no box-shadow on focus when disabled */
-  box-shadow: none;
-  /* Overrides the hover opacity change */
-  opacity: 1;
-  border: none;
-}
-
-/* --- Dark Button: Disabled --- */
-/* Uses opacity to appear faded */
 .btn--dark:disabled,
 .btn--dark[disabled] {
   opacity: 0.5;
@@ -218,8 +258,11 @@
   pointer-events: none;
 }
 
-/* --- outline (Outline) Button: Disabled --- */
-/* Uses lighter, desaturated colors for text and border */
+.btn-outline {
+  background-color: transparent;
+  color: var(--blue-500);
+  border-color: var(--blue-500);
+}
 .btn-outline:disabled,
 .btn-outline[disabled] {
   color: var(--blue-500);
@@ -229,7 +272,6 @@
   background-color: transparent;
 }
 
-/* --- Tertiary (Ghost) Button: Disabled --- */
 .btn-tertiary:disabled,
 .btn-tertiary[disabled] {
   color: var(--neutral-500);
@@ -237,61 +279,14 @@
   cursor: not-allowed;
   pointer-events: none;
 }
-/* --- Dashed Modifier --- */
+
 .btn-dashed {
   border-style: dashed;
 }
 
-.btn-sm {
-  height: 2.75rem; /* 44px */
-  font-size: var(--font-size-sm); /* 14px */
-}
-
-/* Medium Button (the previous default size) */
-.btn-md {
-  height: 3.5rem; /* 56px */
-  font-size: var(--font-size-base); /* 16px */
-}
-
-/* Large Button */
-.btn-lg {
-  height: 4rem; /* 64px */
-  font-size: var(--font-size-lg); /* 20px */
-}
 /* =================================== */
-/* Segmented Control (Toggle Group)    */
+/* Vendor Overrides: ng-select         */
 /* =================================== */
-.ins-toggle-group {
-  display: inline-flex;
-  padding: 0.375rem; /* 6px */
-  gap: 0.375rem; /* 6px */
-  background-color: var(--neutral-150);
-  border-radius: var(--radius-default); /* 8px */
-}
-
-.ins-toggle-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  height: 2.75rem; /* 44px */
-  padding: var(--spacing-sm) var(--font-size-xs);
-  border: none;
-  background-color: transparent;
-  border-radius: var(--radius-sm); /* 4px */
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--neutral-700);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.ins-toggle-item--active {
-  background-color: var(--white);
-  color: var(--blue-500);
-  box-shadow: var(--shadow-sm);
-}
-
 .ng-select.ng-select-single .ng-select-container {
   height: 3.5rem;
 }

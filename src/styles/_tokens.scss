@@ -1,61 +1,59 @@
 :root {
   /* =================================== */
-  /* Colors 🎨                          */
+  /* Colors 🎨                         */
   /* =================================== */
 
   /* --- Brand: Blue --- */
-  /* A full 100-900 scale combining your original and new colors. */
-  --blue-100: #e9efff; /* Existing */
-  --blue-200: #dde0f9; /* New */
-  --blue-300: #a1c0f2; /* Existing */
-  --blue-400: #71a1ec; /* New */
-  --blue-500: #1362df; /* Existing brand color */
-  --blue-600: #336ddf; /* New */
-  --blue-700: #0f4eb2; /* New */
-  --blue-800: #082759; /* New */
-  --blue-900: #07224d; /* Existing */
-  --blue-500-rgb: 19, 98, 223; /* RGB version for opacity */
+  --blue-100: #e9efff;
+  --blue-200: #dde0f9;
+  --blue-300: #a1c0f2;
+  --blue-400: #71a1ec;
+  --blue-500: #1362df;
+  --blue-600: #336ddf;
+  --blue-700: #0f4eb2;
+  --blue-800: #082759;
+  --blue-900: #07224d;
+  --blue-500-rgb: 19, 98, 223;
 
   /* --- Neutral: Greys, Blacks, Whites --- */
-  /* Merged scale for a wider range of tones. */
   --white: #ffffff;
-  --neutral-100: #fcfbfc; /* Off-white */
+  --neutral-100: #fcfbfc;
   --neutral-150: #f5f5f5;
   --neutral-200: #efefef;
-  --neutral-300: #909cb2; /* New */
+  --neutral-300: #909cb2;
   --neutral-500: #888888;
   --neutral-700: #595959;
-  --neutral-800: #4c5a63; /* New */
-  --neutral-900: #161a23; /* Darkest */
-  --black: #000000; /* New */
+  --neutral-800: #4c5a63;
+  --neutral-900: #161a23;
+  --black: #000000;
 
   /* --- Semantic: Red --- */
-  --red-500: #dc3545; /* For errors */
+  --red-500: #dc3545;
 
   /* =================================== */
-  /* Typography ✒️                       */
+  /* Typography ✒️                      */
   /* =================================== */
-  --font-family-base: "Mulish", sans-serif; /* Kept Mulish (same as Muli) */
+  --font-family-base: "Mulish", sans-serif;
 
-  /* Font Weights (cleaned up duplicates) */
+  /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 600; /* New */
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Font Sizes (merged into a single rem-based scale) */
-  --font-size-xs: 0.75rem; /* 10px (New) */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.125rem; /* 18px (New) */
-  --font-size-lg: 1.25rem; /* 20px */
-  --font-size-xl: 1.5rem; /* 24px */
-  --font-size-xxl: 2rem; /* 32px */
-  --font-size-xxxl: 3.5rem; /* 56px (New) */
-  --font-size-xxxxl: 4.5rem; /* 72px (New) */
-  --font-size-display: 6rem; /* 96px (New) */
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 3.5rem;
+  --font-size-xxxxl: 4.5rem;
+  --font-size-display: 6rem;
 
-  /* Line Heights (kept unitless for flexibility) */
+  /* Line Heights */
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
 
@@ -63,30 +61,30 @@
   --letter-spacing-tight: -0.5008px;
 
   /* =================================== */
-  /* Spacing & Sizing 📏                */
+  /* Spacing & Sizing 📏                 */
   /* =================================== */
-  /* Expanded rem-based scale for more options */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-smd: 0.75rem; /* 12px (New) */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px (New) */
-  --spacing-xxl: 3rem; /* 48px (New) */
-  --spacing-xxxl: 4rem; /* 64px (New) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-smd: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --spacing-xxxl: 4rem;
 
   /* =================================== */
-  /* Borders & Shadows ✨               */
+  /* Borders & Shadows ✨              */
   /* =================================== */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-default: 0.5rem; /* 8px */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
 
-  /* Shadows (cleaned up duplicate) */
   --shadow-sm: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.04);
   --shadow-md: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.08),
     0 0 0.125rem 0 rgba(0, 0, 0, 0.08);
+
   /* Icon Paths */
   --icon-user: url("../assets/icons/user.svg");
   --icon-email: url("../assets/icons/email.svg");
   --icon-password: url("../assets/icons/password.svg");
+  --icon-calendar: url("../assets/icons/calendar.svg");
 }

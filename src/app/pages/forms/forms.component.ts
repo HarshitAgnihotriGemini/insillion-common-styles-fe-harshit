@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import dayjs from 'dayjs';
+import { BsDaterangepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-forms',
@@ -18,15 +19,34 @@ export class FormsComponent {
   ];
   selected: { startDate: dayjs.Dayjs; endDate: dayjs.Dayjs } | null = null;
 
-  ranges: any = {
-    Today: [dayjs(), dayjs()],
-    'Last 3 Days': [dayjs().subtract(2, 'days'), dayjs()],
-    'Last 7 Days': [dayjs().subtract(6, 'days'), dayjs()],
-    'Last 30 Days': [dayjs().subtract(29, 'days'), dayjs()],
-    'Last 3 Months': [
-      dayjs().subtract(3, 'month').startOf('month'),
-      dayjs().subtract(1, 'month').endOf('month'),
-    ],
-    // ... and so on
-  };
+  bsRangeConfig: Partial<BsDaterangepickerConfig>;
+
+  constructor() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Normalize to the start of the day
+
+    this.bsRangeConfig = {
+      // Custom styling for the container to match your theme
+      containerClass: 'theme-dark-blue',
+      // Define the predefined ranges
+      ranges: [
+        {
+          value: [today, today],
+          label: 'Today',
+        },
+        {
+          value: [new Date(new Date().setDate(today.getDate() - 7)), today],
+          label: 'Last 7 Days',
+        },
+        {
+          value: [new Date(new Date().setDate(today.getDate() - 30)), today],
+          label: 'Last 30 Days',
+        },
+        {
+          value: [new Date(new Date().setMonth(today.getMonth() - 3)), today],
+          label: 'Last 3 Months',
+        },
+      ],
+    };
+  }
 }

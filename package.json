@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --base-href=/insillion-common-styles-fe-harshit/"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "dayjs": "^1.11.18",
+    "ngx-bootstrap": "^19.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

@@ -50,6 +50,39 @@
       >
       </ng-select>
     </div>
-    
+    <hr class="my-5" />
+    <h2>Date Pickers</h2>
+
+    <div class="mb-3">
+      <label class="form-label">Date Range Picker</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Select date range"
+        bsDaterangepicker
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Single Date Picker</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Select a date"
+        bsDatepicker
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Date Range Picker with Menu</label>
+      <div class="input-icon icon-right icon-calendar">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Select date range"
+          bsDaterangepicker
+          [bsConfig]="bsRangeConfig"
+        />
+      </div>
+    </div>
   </div>
 </div>
