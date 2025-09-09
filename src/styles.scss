@@ -1,2 +1,6 @@
-@import 'styles/main.scss';
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+@import "@ng-select/ng-select/themes/default.theme.css";
+@import "styles/main.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

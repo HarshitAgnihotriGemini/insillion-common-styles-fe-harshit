@@ -1,1 +1,55 @@
-<p>forms works!</p>
+<h2 class="mt-5">Input with Icon</h2>
+<p>A standard form input with a prepended icon.</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label for="example-username" class="form-label required">Username</label>
+      <div class="input-icon icon-user">
+        <input
+          type="text"
+          id="example-username"
+          class="form-control"
+          placeholder="Enter Username"
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="example-email" class="form-label required"
+        >Email Address</label
+      >
+      <div class="input-icon icon-email">
+        <input
+          type="email"
+          id="example-email"
+          class="form-control"
+          placeholder="Enter Email"
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="example-password" class="form-label required">Password</label>
+      <div class="input-icon icon-password">
+        <input
+          type="password"
+          id="example-password"
+          class="form-control"
+          placeholder="Enter Password"
+        />
+      </div>
+    </div>
+    <div class="custom-select-wrapper">
+      <ng-select
+        [items]="cities"
+        bindLabel="name"
+        bindValue="id"
+        [(ngModel)]="selectedCityId"
+        placeholder="Select a city"
+      >
+      </ng-select>
+    </div>
+    
+  </div>
+</div>

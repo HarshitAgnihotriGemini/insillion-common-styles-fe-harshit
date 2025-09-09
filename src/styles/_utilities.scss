@@ -1,0 +1,303 @@
+/* =================================== */
+/* Typography Utilities                */
+/* =================================== */
+
+.text-xs {
+  font-size: var(--font-size-xs) !important;
+}
+.text-sm {
+  font-size: var(--font-size-sm) !important;
+}
+.text-base {
+  font-size: var(--font-size-base) !important;
+}
+.text-md {
+  font-size: var(--font-size-md) !important;
+}
+.text-lg {
+  font-size: var(--font-size-lg) !important;
+}
+.text-xl {
+  font-size: var(--font-size-xl) !important;
+}
+.text-xxl {
+  font-size: var(--font-size-xxl) !important;
+}
+.text-xxxl {
+  font-size: var(--font-size-xxxl) !important;
+}
+.text-xxxxl {
+  font-size: var(--font-size-xxxxl) !important;
+}
+.text-display {
+  font-size: var(--font-size-display) !important;
+}
+
+.font-regular {
+  font-weight: var(--font-weight-regular) !important;
+}
+.font-medium {
+  font-weight: var(--font-weight-medium) !important;
+}
+.font-semibold {
+  font-weight: var(--font-weight-semibold) !important;
+}
+.font-bold {
+  font-weight: var(--font-weight-bold) !important;
+}
+
+.leading-tight {
+  line-height: var(--line-height-tight) !important;
+}
+.leading-base {
+  line-height: var(--line-height-base) !important;
+}
+
+.tracking-tight {
+  letter-spacing: var(--letter-spacing-tight) !important;
+}
+
+/* =================================== */
+/* Color Utilities                     */
+/* =================================== */
+
+/* Text Colors */
+.text-primary {
+  color: var(--blue-500) !important;
+}
+.text-dark {
+  color: var(--neutral-900) !important;
+}
+.text-medium {
+  color: var(--neutral-700) !important;
+}
+.text-light {
+  color: var(--neutral-500) !important;
+}
+.text-on-primary {
+  color: var(--white) !important;
+}
+.text-error {
+  color: var(--red-500) !important;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--blue-500) !important;
+}
+.bg-surface {
+  background-color: var(--white) !important;
+}
+.bg-app {
+  background-color: var(--neutral-150) !important;
+} /* UPDATED: --neutral-50 -> --neutral-150 */
+
+/* =================================== */
+/* Spacing Utilities (Margin & Padding)*/
+/* =================================== */
+
+/* --- All Sides --- */
+.m-xs {
+  margin: var(--spacing-xs) !important;
+}
+.m-sm {
+  margin: var(--spacing-sm) !important;
+}
+.m-smd {
+  margin: var(--spacing-smd) !important;
+}
+.m-md {
+  margin: var(--spacing-md) !important;
+}
+.m-lg {
+  margin: var(--spacing-lg) !important;
+}
+.m-xl {
+  margin: var(--spacing-xl) !important;
+}
+.m-xxl {
+  margin: var(--spacing-xxl) !important;
+}
+.m-xxxl {
+  margin: var(--spacing-xxxl) !important;
+}
+
+.p-xs {
+  padding: var(--spacing-xs) !important;
+}
+.p-sm {
+  padding: var(--spacing-sm) !important;
+}
+.p-smd {
+  padding: var(--spacing-smd) !important;
+}
+.p-md {
+  padding: var(--spacing-md) !important;
+}
+.p-lg {
+  padding: var(--spacing-lg) !important;
+}
+.p-xl {
+  padding: var(--spacing-xl) !important;
+}
+.p-xxl {
+  padding: var(--spacing-xxl) !important;
+}
+.p-xxxl {
+  padding: var(--spacing-xxxl) !important;
+}
+
+/* --- Vertical (Y-axis) --- */
+.my-xs {
+  margin-top: var(--spacing-xs) !important;
+  margin-bottom: var(--spacing-xs) !important;
+}
+.my-sm {
+  margin-top: var(--spacing-sm) !important;
+  margin-bottom: var(--spacing-sm) !important;
+}
+.my-smd {
+  margin-top: var(--spacing-smd) !important;
+  margin-bottom: var(--spacing-smd) !important;
+}
+.my-md {
+  margin-top: var(--spacing-md) !important;
+  margin-bottom: var(--spacing-md) !important;
+}
+.my-lg {
+  margin-top: var(--spacing-lg) !important;
+  margin-bottom: var(--spacing-lg) !important;
+}
+.my-xl {
+  margin-top: var(--spacing-xl) !important;
+  margin-bottom: var(--spacing-xl) !important;
+}
+.my-xxl {
+  margin-top: var(--spacing-xxl) !important;
+  margin-bottom: var(--spacing-xxl) !important;
+}
+.my-xxxl {
+  margin-top: var(--spacing-xxxl) !important;
+  margin-bottom: var(--spacing-xxxl) !important;
+}
+
+.py-xs {
+  padding-top: var(--spacing-xs) !important;
+  padding-bottom: var(--spacing-xs) !important;
+}
+.py-sm {
+  padding-top: var(--spacing-sm) !important;
+  padding-bottom: var(--spacing-sm) !important;
+}
+.py-smd {
+  padding-top: var(--spacing-smd) !important;
+  padding-bottom: var(--spacing-smd) !important;
+}
+.py-md {
+  padding-top: var(--spacing-md) !important;
+  padding-bottom: var(--spacing-md) !important;
+}
+.py-lg {
+  padding-top: var(--spacing-lg) !important;
+  padding-bottom: var(--spacing-lg) !important;
+}
+.py-xl {
+  padding-top: var(--spacing-xl) !important;
+  padding-bottom: var(--spacing-xl) !important;
+}
+.py-xxl {
+  padding-top: var(--spacing-xxl) !important;
+  padding-bottom: var(--spacing-xxl) !important;
+}
+.py-xxxl {
+  padding-top: var(--spacing-xxxl) !important;
+  padding-bottom: var(--spacing-xxxl) !important;
+}
+
+/* --- Horizontal (X-axis) --- */
+.mx-xs {
+  margin-left: var(--spacing-xs) !important;
+  margin-right: var(--spacing-xs) !important;
+}
+.mx-sm {
+  margin-left: var(--spacing-sm) !important;
+  margin-right: var(--spacing-sm) !important;
+}
+.mx-smd {
+  margin-left: var(--spacing-smd) !important;
+  margin-right: var(--spacing-smd) !important;
+}
+.mx-md {
+  margin-left: var(--spacing-md) !important;
+  margin-right: var(--spacing-md) !important;
+}
+.mx-lg {
+  margin-left: var(--spacing-lg) !important;
+  margin-right: var(--spacing-lg) !important;
+}
+.mx-xl {
+  margin-left: var(--spacing-xl) !important;
+  margin-right: var(--spacing-xl) !important;
+}
+.mx-xxl {
+  margin-left: var(--spacing-xxl) !important;
+  margin-right: var(--spacing-xxl) !important;
+}
+.mx-xxxl {
+  margin-left: var(--spacing-xxxl) !important;
+  margin-right: var(--spacing-xxxl) !important;
+}
+
+.px-xs {
+  padding-left: var(--spacing-xs) !important;
+  padding-right: var(--spacing-xs) !important;
+}
+.px-sm {
+  padding-left: var(--spacing-sm) !important;
+  padding-right: var(--spacing-sm) !important;
+}
+.px-smd {
+  padding-left: var(--spacing-smd) !important;
+  padding-right: var(--spacing-smd) !important;
+}
+.px-md {
+  padding-left: var(--spacing-md) !important;
+  padding-right: var(--spacing-md) !important;
+}
+.px-lg {
+  padding-left: var(--spacing-lg) !important;
+  padding-right: var(--spacing-lg) !important;
+}
+.px-xl {
+  padding-left: var(--spacing-xl) !important;
+  padding-right: var(--spacing-xl) !important;
+}
+.px-xxl {
+  padding-left: var(--spacing-xxl) !important;
+  padding-right: var(--spacing-xxl) !important;
+}
+.px-xxxl {
+  padding-left: var(--spacing-xxxl) !important;
+  padding-right: var(--spacing-xxxl) !important;
+}
+
+
+/* Add individual directions (mt, mb, ms, me, pt, etc.) for all new sizes as needed */
+
+/* =================================== */
+/* Border & Shadow Utilities           */
+/* =================================== */
+
+.rounded-sm {
+  border-radius: var(--radius-sm) !important;
+}
+.rounded-default {
+  border-radius: var(--radius-default) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+.shadow-md {
+  box-shadow: var(--shadow-md) !important;
+}

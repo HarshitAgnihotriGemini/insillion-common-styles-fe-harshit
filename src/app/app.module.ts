@@ -10,6 +10,8 @@ import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { FormsComponent } from './pages/forms/forms.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     TypographyComponent,
     ButtonsComponent,
     FormsComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    NgSelectModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

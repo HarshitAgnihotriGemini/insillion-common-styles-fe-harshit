@@ -1,5 +1,59 @@
 <h1>Buttons</h1>
-<p>These are the primary button styles for the application.</p>
+<p class="text-light">
+  These are the primary button styles for the application, built with a base
+  <code>.btn</code> class and modifier classes.
+</p>
 
-<h3 class="mt-4">Primary Button</h3>
-<button type="button" class="btn btn-primary">Submit Application</button>
+<hr class="my-xl" />
+
+<div class="mt-lg">
+  <h3 class="mb-md">Primary Button</h3>
+  <div class="d-flex align-items-center" style="gap: 1rem">
+    <button type="button" class="btn btn-primary btn-md">Submit</button>
+    <button type="button" class="btn btn-primary btn-md">
+      <img src="/assets/icons/plus-circle.svg" alt="" class="btn-icon" />
+      <span>Create New Quote</span>
+    </button>
+  </div>
+</div>
+
+<div class="mt-lg">
+  <h3 class="mb-md">Disabled State</h3>
+  <button type="button" class="btn btn-primary btn-md" disabled>
+    Submit
+  </button>
+</div>
+
+<div class="mt-lg">
+  <h3 class="mb-md">Dark Button</h3>
+  <button type="button" class="btn btn--dark btn-md">Login with AD</button>
+</div>
+
+<div class="mt-lg">
+  <h3 class="mb-md">Outline Button</h3>
+  <div class="d-flex align-items-center" style="gap: 1rem">
+    <button type="button" class="btn btn-outline btn-sm" disabled>
+      Cancel
+    </button>
+    <button type="button" class="btn btn-outline btn-sm">
+      <img src="/assets/icons/search.svg" alt="" class="btn-icon" />
+      <span>Search</span>
+    </button>
+  </div>
+</div>
+
+<div class="mt-lg">
+  <h3 class="mb-md">Dashed Outline Button</h3>
+  <button type="button" class="btn btn-outline btn-dashed btn-sm">
+    <img src="/assets/icons/upload.svg" alt="" class="btn-icon" />
+    <span>Upload</span>
+  </button>
+</div>
+
+<hr class="my-xl" />
+
+<p class="mt-lg">A toggle group for selecting one of two options.</p>
+<div class="ins-toggle-group w-100">
+  <button class="ins-toggle-item ins-toggle-item--active">External User</button>
+  <button class="ins-toggle-item">SSO Login</button>
+</div>

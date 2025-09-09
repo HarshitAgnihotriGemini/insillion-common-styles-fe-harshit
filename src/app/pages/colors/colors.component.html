@@ -1,1 +1,63 @@
-<p>colors works!</p>
+<div class="p-xxl">
+  <h1 class="text-h2-bold mb-sm">Color Palette</h1>
+  <p class="text-p1-regular text-medium mb-xxl" [style.maxWidth]="'65ch'">
+    The standard color palette for the application, including brand, neutral,
+    and semantic colors.
+  </p>
+
+  <div *ngFor="let palette of colorPalettes">
+    <h2
+      class="text-h3-semibold pb-md mb-xl"
+      [style.borderBottom]="'1px solid var(--neutral-200)'"
+    >
+      {{ palette.name }}
+    </h2>
+    <div
+      class="mb-xxl"
+      [style.display]="'grid'"
+      [style.gridTemplateColumns]="'repeat(auto-fill, minmax(200px, 1fr))'"
+      [style.gap]="'var(--spacing-lg)'"
+    >
+      <div
+        *ngFor="let color of palette.colors"
+        class="rounded-default shadow-sm"
+        [style.overflow]="'hidden'"
+        [style.border]="'1px solid var(--neutral-200)'"
+      >
+        <div
+          [style.height]="'120px'"
+          [style.backgroundColor]="color.variable"
+        ></div>
+
+        <div
+          class="p-sm px-md bg-surface"
+          [style.display]="'flex'"
+          [style.justifyContent]="'space-between'"
+          [style.alignItems]="'center'"
+        >
+          <span
+            class="font-semibold text-sm"
+            [ngClass]="{
+              'text-dark': color.textColor === 'dark',
+              'text-medium': color.textColor === 'light'
+            }"
+          >
+            {{ color.name }}
+          </span>
+
+          <span
+            class="text-sm"
+            [style.fontFamily]="'monospace'"
+            [style.opacity]="'0.8'"
+            [ngClass]="{
+              'text-dark': color.textColor === 'dark',
+              'text-medium': color.textColor === 'light'
+            }"
+          >
+            {{ color.hex }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,35 +1,16 @@
-.btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  border-radius: var(--border-radius-md);
-  font-weight: var(--font-weight-medium);
-  padding: 0.75rem 1.5rem;
-
-  &:hover,
-  &:focus {
-    opacity: 0.9;
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--primary-color-light);
-  }
-}
-
+/* =================================== */
+/* App Layout & Structure Styles       */
+/* =================================== */
 .sidebar {
+  background: var(--neutral-150); /* UPDATED from non-existent --neutral-50 */
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 1rem;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
   height: 100vh;
   flex-shrink: 0;
-  background: var(--background-white);
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.04);
-}
-
-.sidebar-header {
-  width: 2.375rem;
-  height: 4.75rem;
-  aspect-ratio: 1/2;
 }
 
 .sidebar-nav ul {
@@ -39,50 +20,319 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-lg);
 }
 
 .nav-item {
   display: flex;
   width: 3.5rem;
   height: 3.5rem;
-  padding: 1rem;
+  padding: var(--spacing-md);
   justify-content: center;
   align-items: center;
+  border-radius: var(--radius-default);
+  transition: background-color 0.2s ease;
 }
 
-.nav-icon {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  aspect-ratio: 1/1;
-}
 .nav-item--active {
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background: var(--background-light);
+  border: 1px solid var(--neutral-200);
+  background: var(--white);
 }
 
+/* =================================== */
+/* Style Guide Dashboard Card          */
+/* =================================== */
 .style-card {
   display: flex;
-  padding: 1.25rem 1.5rem;
-  align-items: center;
-  gap: 0.5rem;
-  align-self: stretch;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.08),
-    0 0 0.125rem 0 rgba(0, 0, 0, 0.08);
-  background: var(--background-light);
+  padding: var(--font-size-lg) var(--spacing-lg); /* UPDATED from hardcoded 1.25rem 1.5rem */
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  background: var(--white);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.style-card-icon {
-  width: 3rem;
-  height: 3rem;
+.style-card:hover {
+  transform: translateY(
+    calc(-1 * var(--spacing-xs))
+  ); /* UPDATED from hardcoded -4px */
 }
 
 .style-card-title {
-  color: var(--black-primary);
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  color: var(--neutral-900);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+}
+
+/* =================================== */
+/* Form Styles                         */
+/* =================================== */
+.required::after {
+  content: " *";
+  color: var(--red-500);
+  margin-left: 2px;
+}
+
+.form-label {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  color: var(--neutral-500);
+  margin-bottom: var(--spacing-sm);
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--neutral-500);
+  mask-image: var(--icon-to-display);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+/* Helper classes that set WHICH icon to display */
+.input-icon.icon-user {
+  --icon-to-display: var(--icon-user);
+}
+.input-icon.icon-email {
+  --icon-to-display: var(--icon-email);
+}
+.input-icon.icon-password {
+  --icon-to-display: var(--icon-password);
+}
+
+.input-icon .form-control {
+  height: 3.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-default);
+  padding-left: 2.5rem;
+}
+
+.form-control::placeholder {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  color: var(--neutral-500) !important;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--neutral-500) !important;
+}
+.form-control::-ms-input-placeholder {
+  color: var(--neutral-500) !important;
+}
+
+/* =================================== */
+/* Button Styles                       */
+/* =================================== */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm); /* For spacing icons and text */
+  padding: 0 var(--spacing-lg);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-default);
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* --- Icon inside a button --- */
+.btn .btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --- Primary Button (Solid) --- */
+.btn-primary {
+  background-color: var(--blue-500);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+.btn-primary:focus {
+  box-shadow: 0 0 0 3px var(--blue-100);
+}
+
+/* --- Dark Button (Solid) --- */
+/* Your existing dark variant */
+.btn--dark {
+  background-color: var(--blue-900);
+  color: var(--white);
+}
+.btn--dark:hover {
+  opacity: 0.9;
+}
+
+/* --- outline Button (Outline) --- */
+.btn-outline {
+  background-color: transparent;
+  color: var(--blue-500);
+  border-color: var(--blue-500);
+}
+
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: rgba(var(--blue-500-rgb), 0.4);
+  cursor: not-allowed;
+  /* Ensure no box-shadow on focus when disabled */
+  box-shadow: none;
+  /* Overrides the hover opacity change */
+  opacity: 1;
+  border: none;
+}
+
+/* --- Dark Button: Disabled --- */
+/* Uses opacity to appear faded */
+.btn--dark:disabled,
+.btn--dark[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- outline (Outline) Button: Disabled --- */
+/* Uses lighter, desaturated colors for text and border */
+.btn-outline:disabled,
+.btn-outline[disabled] {
+  color: var(--blue-500);
+  border-color: var(--blue-500);
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+/* --- Tertiary (Ghost) Button: Disabled --- */
+.btn-tertiary:disabled,
+.btn-tertiary[disabled] {
+  color: var(--neutral-500);
+  background-color: var(--neutral-150);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+/* --- Dashed Modifier --- */
+.btn-dashed {
+  border-style: dashed;
+}
+
+.btn-sm {
+  height: 2.75rem; /* 44px */
+  font-size: var(--font-size-sm); /* 14px */
+}
+
+/* Medium Button (the previous default size) */
+.btn-md {
+  height: 3.5rem; /* 56px */
+  font-size: var(--font-size-base); /* 16px */
+}
+
+/* Large Button */
+.btn-lg {
+  height: 4rem; /* 64px */
+  font-size: var(--font-size-lg); /* 20px */
+}
+/* =================================== */
+/* Segmented Control (Toggle Group)    */
+/* =================================== */
+.ins-toggle-group {
+  display: inline-flex;
+  padding: 0.375rem; /* 6px */
+  gap: 0.375rem; /* 6px */
+  background-color: var(--neutral-150);
+  border-radius: var(--radius-default); /* 8px */
+}
+
+.ins-toggle-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 2.75rem; /* 44px */
+  padding: var(--spacing-sm) var(--font-size-xs);
+  border: none;
+  background-color: transparent;
+  border-radius: var(--radius-sm); /* 4px */
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-700);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ins-toggle-item--active {
+  background-color: var(--white);
+  color: var(--blue-500);
+  box-shadow: var(--shadow-sm);
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 3.5rem;
+}
+
+.ng-select .ng-select-container {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-default);
+  min-height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+}
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  color: var(--neutral-500) !important;
+  opacity: 1;
+}
+.ng-select div,
+.ng-select input,
+.ng-select span {
+  font-size: var(--font-size-sm);
+}
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  height: 100%;
+  margin-top: -0.3125rem;
+  padding-left: 1rem;
+}
+.ng-select .ng-select-container .ng-value-container .ng-input > input {
+  height: 100%;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  border: 1px solid var(--neutral-200);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.ng-select.ng-select-opened.ng-select-bottom > .ng-select-container {
+  border: 1px solid var(--neutral-200);
+}
+.ng-select .ng-select-container .ng-value-container {
+  padding-left: 1rem;
 }

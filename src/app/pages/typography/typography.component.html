@@ -1,1 +1,78 @@
-<p>typography works!</p>
+<div class="p-xxl">
+  <h1 class="text-h2-bold mb-sm">Typography</h1>
+  <p class="text-p1-regular text-medium mb-xl" [style.maxWidth]="'65ch'">
+    This page showcases standard text styles built by combining utility classes.
+  </p>
+
+  <h2
+    class="text-h3-semibold pb-md mb-xl"
+    [style.borderBottom]="'1px solid var(--neutral-200)'"
+  >
+    Headings
+  </h2>
+
+  <div class="mb-xl">
+    <h1 class="text-display font-bold">Display Heading</h1>
+    <p class="text-sm text-light font-mono">.text-display .font-bold</p>
+  </div>
+
+  <div class="mb-xl">
+    <h2 class="text-xxxxl font-semibold">Heading XL Semibold</h2>
+    <p class="text-sm text-light font-mono">.text-xxxxl .font-semibold</p>
+  </div>
+
+  <div class="mb-xl">
+    <h3 class="text-xxl font-bold text-primary">Primary Heading</h3>
+    <p class="text-sm text-light font-mono">
+      .text-xxl .font-bold .text-primary
+    </p>
+  </div>
+
+  <h2
+    class="text-h3-semibold pb-md mt-xxl mb-xl"
+    [style.borderBottom]="'1px solid var(--neutral-200)'"
+  >
+    Body & Paragraph Text
+  </h2>
+
+  <div class="mb-xl">
+    <p
+      class="text-base font-regular leading-base text-dark"
+      [style.maxWidth]="'65ch'"
+    >
+      This is a standard paragraph of body text. It provides a comfortable
+      reading experience for longer content blocks. It is composed of several
+      utility classes to control its size, weight, line-height, and color.
+    </p>
+    <p class="text-sm text-light font-mono">
+      .text-base .font-regular .leading-base .text-dark
+    </p>
+  </div>
+
+  <div class="mb-xl">
+    <p class="text-md font-semibold text-dark">
+      This is an emphasized paragraph, using a larger size and semibold weight.
+    </p>
+    <p class="text-sm text-light font-mono">
+      .text-md .font-semibold .text-dark
+    </p>
+  </div>
+
+  <div class="mb-xl">
+    <p class="text-sm text-light">
+      This is a muted or secondary paragraph, perfect for captions or helper
+      text.
+    </p>
+    <p class="text-sm text-light font-mono">.text-sm .text-light</p>
+  </div>
+
+  <div class="mb-xl">
+    <p class="text-xs font-regular text-medium">
+      This is for fine print, footnotes, or other small text elements where
+      readability is less critical.
+    </p>
+    <p class="text-sm text-light font-mono">
+      .text-xs .font-regular .text-medium
+    </p>
+  </div>
+</div>

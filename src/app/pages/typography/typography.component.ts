@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-typography',
   standalone: false,
   templateUrl: './typography.component.html',
-  styleUrl: './typography.component.scss'
+  styleUrl: './typography.component.scss',
 })
 export class TypographyComponent {
-
+ 
 }
