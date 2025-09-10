@@ -86,7 +86,7 @@
   background-color: transparent;
   border-radius: var(--radius-sm);
   font-family: var(--font-family-base);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   color: var(--neutral-700);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -96,6 +96,7 @@
   background-color: var(--white);
   color: var(--blue-500);
   box-shadow: var(--shadow-sm);
+    font-weight: var(--font-weight-bold);
 }
 
 /* =================================== */
@@ -190,6 +191,10 @@
 /* =================================== */
 /* Button Styles                       */
 /* =================================== */
+/* =================================== */
+/* Button Styles (Complete with all states) */
+/* =================================== */
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -199,12 +204,18 @@
   border: 1px solid transparent;
   border-radius: var(--radius-default);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+  position: relative;
+  isolation: isolate;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--blue-100);
 }
 
 .btn .btn-icon {
@@ -212,6 +223,7 @@
   height: 1.25rem;
 }
 
+/* --- Size Modifiers --- */
 .btn-sm {
   height: 2.75rem;
   font-size: var(--font-size-sm);
@@ -225,37 +237,34 @@
   font-size: var(--font-size-lg);
 }
 
+/* --- Primary Button --- */
 .btn-primary {
   background-color: var(--blue-500);
   color: var(--white);
 }
 .btn-primary:hover {
-  opacity: 0.9;
+  background-color: var(--blue-550);
 }
-.btn-primary:focus {
-  box-shadow: 0 0 0 3px var(--blue-100);
-}
-.btn-primary:disabled,
-.btn-primary[disabled] {
-  background-color: rgba(var(--blue-500-rgb), 0.4);
-  cursor: not-allowed;
-  box-shadow: none;
-  opacity: 1;
-  border: none;
+.btn-primary:active {
+  background-color: var(--blue-500); /* Keeps original color on click */
 }
 
+/* --- Dark Button --- */
 .btn--dark {
   background-color: var(--blue-900);
   color: var(--white);
 }
 .btn--dark:hover {
-  opacity: 0.9;
+  color: var(--white) !important;
+  background-color: var(--blue-900) !important;
 }
-.btn--dark:disabled,
-.btn--dark[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
-  pointer-events: none;
+.btn--dark:active {
+  color: var(--white) !important;
+  background-color: var(--blue-900) !important;
+}
+.btn--dark:focus-visible {
+  color: var(--white) !important;
+  background-color: var(--blue-900) !important;
 }
 
 .btn-outline {
@@ -263,27 +272,37 @@
   color: var(--blue-500);
   border-color: var(--blue-500);
 }
-.btn-outline:disabled,
-.btn-outline[disabled] {
+.btn-outline:hover {
+  background-color: var(--blue-100);
+}
+.btn-outline:active {
+  background-color: transparent; /* Keeps original style on click */
   color: var(--blue-500);
   border-color: var(--blue-500);
-  cursor: not-allowed;
-  pointer-events: none;
-  background-color: transparent;
 }
 
-.btn-tertiary:disabled,
-.btn-tertiary[disabled] {
-  color: var(--neutral-500);
-  background-color: var(--neutral-150);
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
+/* --- Dashed Modifier --- */
 .btn-dashed {
   border-style: dashed;
 }
 
+/* --- Disabled State --- */
+.btn:disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn:disabled::before,
+.btn[disabled]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: inherit;
+}
 /* =================================== */
 /* Vendor Overrides: ng-select         */
 /* =================================== */
@@ -331,5 +350,3 @@
 .ng-select .ng-select-container .ng-value-container {
   padding-left: 1rem;
 }
-
-
