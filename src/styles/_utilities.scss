@@ -80,6 +80,9 @@
 .text-error {
   color: var(--red-500) !important;
 }
+.text-red {
+  color: var(--red-400) !important;
+}
 
 .text-purple{
   color: var(--purple-100);
@@ -97,9 +100,17 @@
 .bg-app {
   background-color: var(--neutral-150) !important;
 }
-
+.bg-neutral-50 {
+    background: var(--neutral-50) !important;
+}
+.bg-neutral-100 {
+  background: var(--neutral-100) !important;
+}
 .bg-purple{
-  background-color: var(--purple-100);
+  background-color: var(--purple-100) !important;
+}
+.bg-inherit {
+  background: inherit !important;
 }
 
 /* =================================== */
@@ -303,9 +314,93 @@
   border-radius: var(--radius-default) !important;
 }
 
+.border-none {
+  border: 0 !important;
+}
+.border-sm-neutral-250 {
+  border: var(--border-sm-neutral-250) !important;
+}
+.border-sm-neutral-225 {
+  border: var(--border-sm-neutral-225) !important;
+}
+
 .shadow-sm {
   box-shadow: var(--shadow-sm) !important;
 }
 .shadow-md {
   box-shadow: var(--shadow-md) !important;
+}
+
+
+/* =================================== */
+/* Flex Utilities (Gap)                */
+/* =================================== */
+.gap-xxs { 
+  gap: var(--spacing-xxs) !important; 
+}
+.gap-xs { 
+  gap: var(--spacing-xs) !important; 
+}
+.gap-sm { 
+  gap: var(--spacing-sm) !important; 
+}
+.gap-smd { 
+  gap: var(--spacing-smd) !important;
+}
+.gap-md { 
+  gap: var(--spacing-md) !important; 
+}
+.gap-mdl { 
+  gap: var(--spacing-mdl) !important; 
+}
+.gap-lg { 
+  gap: var(--spacing-lg) !important; 
+}
+.gap-lgl { 
+  gap: var(--spacing-lgl) !important; 
+}
+.gap-xl { 
+  gap: var(--spacing-xl) !important; 
+}
+.gap-xxl { 
+  gap: var(--spacing-xxl) !important; 
+}
+.gap-xxxl { 
+  gap: var(--spacing-xxxl) !important;
+}
+
+
+// Cursor-pointer
+.cursor-click {
+  cursor: pointer;
+}
+
+/* =================================== */
+/* Postion Utilities                   */
+/* =================================== */
+.static { 
+  position: static !important; 
+}
+.fixed { 
+  position: fixed !important; 
+}
+.absolute { 
+  position: absolute !important; 
+}
+.relative { 
+  position: relative !important;
+}
+.sticky { 
+  position: sticky !important; 
+}
+
+
+/* =================================== */
+/* Transition Utilities                */
+/* =================================== */
+.transition-ease-in-out-03 {
+  transition: all 0.3s ease-in-out;
+}
+.transition-ease-in-out-02 {
+  transition: all 0.3s ease-in-out;
 }
