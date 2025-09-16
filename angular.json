@@ -55,6 +55,26 @@
               ],
               "outputHashing": "all"
             },
+            "github-pages": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1.5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "none",
+              "optimization": true,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -101,7 +121,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/insillion-common-styles-fe-harshit/"
+            "baseHref": "/insillion-common-styles-fe-harshit/",
+            "buildTarget": "insurance-style-guide:build:github-pages"
           }
         }
       }
