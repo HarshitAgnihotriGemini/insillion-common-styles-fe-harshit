@@ -183,7 +183,7 @@
   background-color: var(--white);
   color: var(--blue-500);
   box-shadow: var(--shadow-sm);
-    font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 /* =================================== */
@@ -237,7 +237,7 @@
 .form-control {
   height: 3.5rem;
   background-color: var(--white);
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--grey-200);
   border-radius: var(--radius-default);
 }
 
@@ -398,7 +398,7 @@
 }
 
 .ng-select .ng-select-container {
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--grey-200);
   border-radius: var(--radius-default);
   min-height: 2.25rem;
   align-items: center;
@@ -427,13 +427,152 @@
 }
 
 .ng-dropdown-panel.ng-select-bottom {
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--grey-200);
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 .ng-select.ng-select-opened.ng-select-bottom > .ng-select-container {
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--grey-200);
 }
 .ng-select .ng-select-container .ng-value-container {
   padding-left: 1rem;
+}
+
+/* =================================== */
+/* Page Structure & Cards              */
+/* =================================== */
+.section-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-225);
+  background-color: var(--white);
+}
+
+.card-header {
+  background-color: var(--blue-50);
+  padding: var(--spacing-xl);
+}
+
+.form-section {
+  padding: var(--spacing-xl);
+}
+
+/* =================================== */
+/* Reusable Components                 */
+/* =================================== */
+
+/* --- Badge --- */
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-xl);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  width: 121px; /* As per your design */
+}
+.badge-warning {
+  background-color: var(--orange-100);
+  color: var(--orange-500);
+}
+.badge-danger {
+  background-color: var(--red-100);
+  color: var(--red-500);
+}
+.badge-success {
+  background-color: var(--green-100);
+  color: var(--green-500);
+}
+
+/* --- Icon Circle --- */
+.icon-circle {
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-full);
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =================================== */
+/* Vendor Overrides: Angular Material  */
+/* =================================== */
+
+/* --- Data Table & Paginator --- */
+.data-table {
+  width: 100%;
+}
+.data-table .mat-mdc-table {
+  background-color: var(--white);
+}
+.data-table .mat-mdc-paginator {
+  background-color: var(--neutral-100);
+  color: var(--neutral-600);
+  border-top: 1px solid var(--blue-400);
+}
+.data-table .mat-mdc-header-row {
+  border: 1px solid var(--neutral-225);
+}
+.data-table .mat-mdc-header-cell {
+  background-color: var(--neutral-100);
+  color: var(--neutral-700);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  border-top: 1px solid var(--blue-400);
+  border-bottom: 1px solid var(--neutral-225);
+}
+.data-table .mat-mdc-row {
+  border: 1px solid var(--neutral-225);
+}
+.data-table .mat-mdc-cell {
+  color: var(--neutral-950);
+  border-bottom: 1px solid var(--neutral-225);
+}
+.data-table.striped .mat-mdc-row:nth-child(even) {
+  background-color: var(--blue-50);
+}
+.data-table .mat-mdc-cell a {
+  color: var(--blue-500);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+}
+
+/* --- Select / Option Styles --- */
+.mat-mdc-select-panel {
+  background-color: var(--white);
+}
+.mat-mdc-option {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-900);
+}
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) {
+  background-color: var(--blue-50);
+  color: var(--neutral-900);
+}
+.mat-mdc-select-arrow {
+  color: var(--neutral-900);
+}
+.mat-mdc-paginator .mat-mdc-select-value {
+  font-size: var(--font-size-sm);
+  color: var(--neutral-900);
+}
+.mat-mdc-paginator-page-size-select {
+  width: 74px;
+  height: 38px;
+}
+.mat-mdc-paginator .mat-mdc-form-field .mdc-notched-outline > * {
+  border-color: var(--blue-400);
+}
+.mat-mdc-paginator .mat-mdc-form-field .mdc-text-field {
+  border-radius: var(--radius-sm);
+}
+
+/* --- Paginator Icon Button Styles --- */
+.mat-mdc-paginator-icon {
+  fill: var(--neutral-900);
+}
+.mat-mdc-icon-button[aria-disabled] .mat-mdc-paginator-icon {
+  opacity: 0.3;
 }
