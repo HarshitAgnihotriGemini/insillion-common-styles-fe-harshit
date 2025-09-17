@@ -687,7 +687,7 @@ p {
 
   .footer {
     position: fixed;
-    left: 0;
+    margin-left: -1.75rem;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -860,4 +860,13 @@ p {
   .mat-mdc-icon-button svg {
     color: var(--gray-350) !important;
   }
+}
+
+.ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+  border-color: var(--neutral-200) !important;
+  box-shadow: none !important;
+}
+.form-control:focus {
+  border-color: var(--neutral-200) !important;
+  box-shadow: none !important;
 }
