@@ -378,6 +378,7 @@
 .btn[disabled] {
   cursor: not-allowed;
   pointer-events: none;
+  border: none;
 }
 .btn:disabled::before,
 .btn[disabled]::before {
