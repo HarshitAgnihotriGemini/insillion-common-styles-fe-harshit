@@ -237,7 +237,7 @@
 .form-control {
   height: 3.5rem;
   background-color: var(--white);
-  border: 1px solid var(--grey-200);
+  border: 1px solid var(--grey-50);
   border-radius: var(--radius-default);
 }
 
@@ -399,7 +399,7 @@
 }
 
 .ng-select .ng-select-container {
-  border: 1px solid var(--grey-200);
+  border: 1px solid var(--grey-50);
   border-radius: var(--radius-default);
   min-height: 2.25rem;
   align-items: center;
@@ -428,12 +428,12 @@
 }
 
 .ng-dropdown-panel.ng-select-bottom {
-  border: 1px solid var(--grey-200);
+  border: 1px solid var(--grey-50);
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 .ng-select.ng-select-opened.ng-select-bottom > .ng-select-container {
-  border: 1px solid var(--grey-200);
+  border: 1px solid var(--grey-50);
 }
 .ng-select .ng-select-container .ng-value-container {
   padding-left: 1rem;
