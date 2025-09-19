@@ -65,6 +65,9 @@
 .text-primary {
   color: var(--blue-500) !important;
 }
+.text-blue-secondary {
+  color: var(--blue-secondary) !important;
+}
 .text-dark {
   color: var(--neutral-900) !important;
 }
@@ -84,11 +87,9 @@
   color: var(--red-400) !important;
 }
 
-.text-purple{
+.text-purple {
   color: var(--purple-100);
 }
-
-
 
 /* Background Colors */
 .bg-primary {
@@ -101,12 +102,12 @@
   background-color: var(--neutral-150) !important;
 }
 .bg-neutral-50 {
-    background: var(--neutral-50) !important;
+  background: var(--neutral-50) !important;
 }
 .bg-neutral-100 {
   background: var(--neutral-100) !important;
 }
-.bg-purple{
+.bg-purple {
   background-color: var(--purple-100) !important;
 }
 .bg-inherit {
@@ -302,7 +303,6 @@
   padding-right: var(--spacing-xxxl) !important;
 }
 
-
 /* =================================== */
 /* Border & Shadow Utilities           */
 /* =================================== */
@@ -331,44 +331,42 @@
   box-shadow: var(--shadow-md) !important;
 }
 
-
 /* =================================== */
 /* Flex Utilities (Gap)                */
 /* =================================== */
-.gap-xxs { 
-  gap: var(--spacing-xxs) !important; 
+.gap-xxs {
+  gap: var(--spacing-xxs) !important;
 }
-.gap-xs { 
-  gap: var(--spacing-xs) !important; 
+.gap-xs {
+  gap: var(--spacing-xs) !important;
 }
-.gap-sm { 
-  gap: var(--spacing-sm) !important; 
+.gap-sm {
+  gap: var(--spacing-sm) !important;
 }
-.gap-smd { 
+.gap-smd {
   gap: var(--spacing-smd) !important;
 }
-.gap-md { 
-  gap: var(--spacing-md) !important; 
+.gap-md {
+  gap: var(--spacing-md) !important;
 }
-.gap-mdl { 
-  gap: var(--spacing-mdl) !important; 
+.gap-mdl {
+  gap: var(--spacing-mdl) !important;
 }
-.gap-lg { 
-  gap: var(--spacing-lg) !important; 
+.gap-lg {
+  gap: var(--spacing-lg) !important;
 }
-.gap-lgl { 
-  gap: var(--spacing-lgl) !important; 
+.gap-lgl {
+  gap: var(--spacing-lgl) !important;
 }
-.gap-xl { 
-  gap: var(--spacing-xl) !important; 
+.gap-xl {
+  gap: var(--spacing-xl) !important;
 }
-.gap-xxl { 
-  gap: var(--spacing-xxl) !important; 
+.gap-xxl {
+  gap: var(--spacing-xxl) !important;
 }
-.gap-xxxl { 
+.gap-xxxl {
   gap: var(--spacing-xxxl) !important;
 }
-
 
 // Cursor-pointer
 .cursor-click {
@@ -378,22 +376,21 @@
 /* =================================== */
 /* Postion Utilities                   */
 /* =================================== */
-.static { 
-  position: static !important; 
+.static {
+  position: static !important;
 }
-.fixed { 
-  position: fixed !important; 
+.fixed {
+  position: fixed !important;
 }
-.absolute { 
-  position: absolute !important; 
+.absolute {
+  position: absolute !important;
 }
-.relative { 
+.relative {
   position: relative !important;
 }
-.sticky { 
-  position: sticky !important; 
+.sticky {
+  position: sticky !important;
 }
-
 
 /* =================================== */
 /* Transition Utilities                */
