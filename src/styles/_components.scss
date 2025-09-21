@@ -434,6 +434,7 @@
   border: 1px solid var(--grey-50);
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+  overflow: hidden !important;
 }
 .ng-select.ng-select-opened.ng-select-bottom > .ng-select-container {
   border: 1px solid var(--grey-50);
