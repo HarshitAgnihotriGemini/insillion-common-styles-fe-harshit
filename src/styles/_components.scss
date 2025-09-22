@@ -917,3 +917,330 @@ p {
 .bs-datepicker-body {
   border-radius: 0 0 4px 4px !important;
 }
+
+/* =================================== */
+/* CPM COMPONENT               */
+/* =================================== */
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg) !important;
+}
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.crumb {
+  color: var(--blue-500);
+  text-decoration: none;
+}
+.crumb:hover {
+  text-decoration: underline;
+}
+.crumb.current {
+  color: #676767;
+  pointer-events: none;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: ">";
+  color: var(--blue-500);
+  margin-left: 0.5rem;
+}
+
+.breadcrumbs-item:nth-last-child(2)::after {
+  color: #676767;
+}
+
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #131314;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.accordian {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-toggle-icon {
+  border: solid var(--blue-500);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion-toggle-icon.expanded {
+  transform: rotate(-135deg);
+}
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-out;
+}
+
+.accordion-content.expanded {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content-inner {
+  overflow: hidden;
+}
+
+.bs-datepicker-container {
+  padding: 0px !important;
+}
+.theme-green .bs-datepicker-head {
+  background: #1362df !important;
+}
+
+.theme-green .bs-datepicker-body table td.week span {
+  display: none !important;
+}
+
+.bs-datepicker-head {
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.bs-datepicker-body {
+  border-radius: 0 0 4px 4px !important;
+}
+
+.modal-header {
+  padding: 2.5rem !important;
+  border-bottom: 0px !important;
+  background: #f1f5fd !important;
+}
+.modal-content {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.modal-title {
+  color: #004992 !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+.modal-body {
+  padding: 0px !important;
+}
+.tc-container {
+  padding: 40px 24px 40px 24px !important;
+}
+
+.text-grey {
+  color: var(--grey-200);
+}
+
+/* =================================== */
+/* Total Premium Footer                */
+/* =================================== */
+
+.total-premium {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2ecfb;
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.total-premium-details {
+  text-align: left;
+  padding-right: 20px;
+}
+
+.total-premium-label {
+  color: var(--neutral-900);
+}
+
+.total-premium-link {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--blue-500);
+  text-decoration: underline !important;
+}
+
+.total-premium-amount {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 1px solid var(--blue-400);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-900);
+}
+
+.offcanvas {
+  background: #fafbfe !important;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.15) !important;
+  border-left: 0px !important;
+  height: 100vh !important;
+}
+.offcanvas-backdrop.show {
+  opacity: 0 !important;
+}
+.offcanvas-width-40 {
+  width: 40% !important;
+}
+
+.offcanvas-width-50 {
+  width: 50% !important;
+}
+.ng-select .ng-clear-wrapper {
+  display: none !important;
+}
+.covers-container {
+  overflow-y: auto !important;
+  max-height: 30.625rem !important;
+}
+.ckyc-form-container {
+  overflow-y: auto !important;
+  max-height: 81vh !important;
+}
+
+.card {
+  border: none !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14), 0px 0px 2px rgba(0, 0, 0, 0.12) !important;
+}
+.panel-open.card-header {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom: 0px !important;
+}
+.card-header {
+  border: none !important;
+  font-weight: 600 !important;
+}
+.canvas-container {
+  height: 100vh !important;
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 2px;
+  cursor: pointer !important;
+}
+
+.form-check-input {
+  border: 2px solid #0d6efd !important;
+}
+
+.form-check-input:focus {
+  box-shadow: none !important;
+}
+
+.toggle-container {
+  background: #f1f5fd;
+  border-radius: 24px;
+}
+.form-check-input:checked[type="radio"] {
+  cursor: pointer !important;
+}
+
+.terms-container {
+  max-height: 60vh;
+  min-height: 60vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.terms-container::-webkit-scrollbar {
+  display: none;
+}
+.card-body {
+  max-height: 30vh;
+  overflow-y: auto;
+  scrollbar-color: #1362df #dce1e9;
+}
+
+.card-body::-webkit-scrollbar-track {
+  background-color: #dce1e9;
+  border-radius: 4px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  background-color: #1362df;
+  border-radius: 4px;
+}
+
+.card-body::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.accordion-arrow {
+  border: solid var(--blue-500);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg); /* Points down by default (collapsed) */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotates the arrow when the .expanded class is added */
+.accordion-arrow.expanded {
+  transform: rotate(-135deg); /* Points up when expanded */
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #dce1e9;
+}
+
+.attachment-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  height: 100%;
+  width: 100%;
+  width: 9.375rem;
+  height: 9.375rem;
+}
+
+.attachment-card-review {
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  width: 17.5rem;
+}
+
+.file-name,
+.file-id {
+  width: 8rem;
+}
+.text-ul {
+  text-decoration: underline !important;
+}
+
+.form-check-round[type="checkbox"] {
+  border-radius: 50% !important;
+  border: 1px solid #0d6efd !important;
+  cursor: pointer;
+}
