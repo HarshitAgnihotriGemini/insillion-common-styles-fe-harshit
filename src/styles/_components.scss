@@ -126,6 +126,26 @@
   object-fit: contain;
 }
 
+.sidenav-tooltip {
+  left: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition-delay: 0.1s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -0.35rem;
+    border-width: 0.35rem;
+    border-style: solid;
+    border-color: transparent var(--neutral-900) transparent transparent;
+  }
+}
+
 /* =================================== */
 /* Reusable Components                 */
 /* =================================== */
