@@ -220,7 +220,6 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-sm);
   line-height: 1;
-  color: var(--gray-350);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -992,7 +991,6 @@ p {
 .accordion-content.expanded {
   grid-template-rows: 1fr;
 }
-
 
 .bs-datepicker-container {
   padding: 0px !important;
