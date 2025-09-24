@@ -217,7 +217,7 @@
 
 .form-label {
   font-family: var(--font-family-base);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-sm);
   line-height: 1;
   margin-bottom: var(--spacing-sm);
@@ -1196,6 +1196,9 @@ p {
 
 .border-bottom-grey {
   border-bottom: 1px solid #dce1e9;
+}
+.border-bottom-grey-2 {
+  border-bottom: 2px solid #dce1e9;
 }
 
 .attachment-card {
