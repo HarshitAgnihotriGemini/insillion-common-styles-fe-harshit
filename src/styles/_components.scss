@@ -466,6 +466,34 @@
   padding-left: 1rem;
 }
 
+.ng-select .ng-select-container {
+  position: relative;
+}
+
+.ng-select .ng-arrow-wrapper {
+  display: none;
+}
+
+.ng-select .ng-select-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--neutral-700);
+  -webkit-mask-image: var(--icon-down-arrow);
+  mask-image: var(--icon-down-arrow);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  transition: transform 0.2s ease;
+}
+
+.ng-select.ng-select-opened .ng-select-container::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 /* =================================== */
 /* Page Structure & Cards              */
 /* =================================== */
@@ -1251,4 +1279,8 @@ p {
   border-radius: 50% !important;
   border: 1px solid #0d6efd !important;
   cursor: pointer;
+}
+
+.summary-item-label {
+  font-weight: 600;
 }
