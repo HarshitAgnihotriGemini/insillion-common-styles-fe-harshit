@@ -256,6 +256,10 @@
   --icon-to-display: var(--icon-search);
 }
 
+.input-icon.icon-rupee {
+  --icon-to-display: var(--icon-rupee);
+}
+
 .form-control {
   height: 3.5rem;
   background-color: var(--white);
