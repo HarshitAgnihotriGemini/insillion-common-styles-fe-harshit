@@ -1300,7 +1300,6 @@ p {
   flex-shrink: 0;
   justify-content: space-between;
 }
-
 .toast-success {
   padding: 1.5rem;
   border-radius: 6px;
@@ -1317,7 +1316,7 @@ p {
     transform: translateY(-50%);
     width: 2rem;
     height: 2rem;
-    background-image: url("/public/assets/images/CheckCircle.svg");
+    background-image: url("https://harshitagnihotrigemini.github.io/insillion-common-styles-fe-harshit/assets/images/CheckCircle.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1339,7 +1338,7 @@ p {
     transform: translateY(-50%);
     width: 2rem;
     height: 2rem;
-    background-image: url("/");
+    background-image: url("/public/assets/images/CheckCircle.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1347,7 +1346,7 @@ p {
 
 .toast-title {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.25rem;
   font-style: normal;
   line-height: normal;
@@ -1356,9 +1355,29 @@ p {
 
 .toast-message {
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   line-height: normal;
+  color: #161a23;
+}
+
+.toast-container .ngx-toastr {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 55px;
+  width: 300px;
+  border-radius: 3px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  box-shadow: none;
+  color: #161a23;
+}
+
+.toast-close-button {
+  font-size: 20px;
+  font-weight: 600;
   color: #161a23;
 }
 
