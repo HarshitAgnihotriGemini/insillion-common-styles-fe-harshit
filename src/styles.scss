@@ -1,6 +1,7 @@
 // 1. All Sass @use rules MUST come first.
 // This loads the Sass modules for Bootstrap and your custom styles.
 @use "bootstrap/scss/bootstrap";
+@use "ngx-toastr/toastr";
 @use "styles/main";
 
 html, body, app-root {

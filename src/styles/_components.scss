@@ -1283,3 +1283,87 @@ p {
 .summary-item-label {
   font-weight: 600;
 }
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.page-footer {
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.toast-success {
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #28a745;
+  background: #e6f6ec;
+  width: 100%;
+  min-width: 22.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../../public/assets/icons/CheckCircle.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.toast-error {
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #dc3545;
+  background: #fdebec;
+  width: 100%;
+  min-width: 22.5rem;
+  min-height: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-image: url("/");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.toast-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  font-style: normal;
+  line-height: normal;
+  color: #161a23;
+}
+
+.toast-message {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #161a23;
+}
+
+.section-card .card-header.accordian.collapsed {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
