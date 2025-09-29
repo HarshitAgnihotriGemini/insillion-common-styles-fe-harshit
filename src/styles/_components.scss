@@ -753,13 +753,21 @@ p {
       padding: 1.375rem var(--spacing-xmd);
     }
   }
+
+  .table-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+  }
+
   .generic-table-card {
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
 
   .footer {
     position: fixed;
-    margin-left: -1.75rem;
+    margin-left: -0.75rem;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -768,6 +776,46 @@ p {
     box-shadow: 0rem -0.125rem 0.5rem 0rem var(--black-op-lighter);
   }
 }
+
+.search-tabs-container {
+  .search-tab,
+  .search-tab-active {
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    .tab-icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  .search-tab-active {
+    border: 2px solid var(--blue-500);
+    background-color: var(--blue-500);
+    .tab-details {
+      .tab-title {
+        color: var(--neutral-150);
+      }
+      .tab-count {
+        color: var(--white);
+      }
+    }
+  }
+
+  .search-tab {
+    border: 2px solid var(--neutral-225);
+    background-color: var(--white);
+    .tab-details {
+      .tab-title {
+        color: var(--grey-200);
+      }
+      .tab-count {
+        color: var(--neutral-900);
+      }
+    }
+  }
+}
+
 .generic-table {
   border-radius: 0 !important;
   border-top-right-radius: var(--spacing-md) !important;
@@ -792,7 +840,7 @@ p {
     .download-btn {
       border: 0;
       border-radius: 8px;
-      padding: 0.875rem;
+      padding: 0.58rem 0.875rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -803,7 +851,6 @@ p {
 
   th {
     background: var(--ghost-white) !important;
-    color: var(--grey-200) !important;
     border-top: 1px solid var(--blue-350) !important;
     border-bottom: 1px solid var(--neutral-250) !important;
   }
@@ -825,8 +872,14 @@ p {
     }
   }
 
-  .tdata-row {
+  .tdata-row,
+  .tdata-header {
     color: var(--eerie-black-100);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg) !important;
+    min-height: 4.125rem !important;
+    overflow: hidden;
 
     .dynamic-status {
       border-radius: var(--spacing-lg);
@@ -834,11 +887,13 @@ p {
     }
   }
 
-  .mdc-data-table__cell {
-    padding: var(--spacing-xmd) var(--spacing-lg) !important;
+  .tdata-header {
+    color: var(--grey-200) !important;
   }
+
+  .mdc-data-table__cell,
   .mdc-data-table__header-cell {
-    padding: var(--spacing-xmd) var(--spacing-lg) !important;
+    padding: 0 !important;
   }
 
   .even-row {
@@ -853,6 +908,22 @@ p {
 
   .no-data-container {
     height: 20rem;
+  }
+
+  .truncate-multi-line {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+  }
+
+  .min-width-column {
+    min-width: 10rem !important;
+  }
+
+  .mat-mdc-table {
+    background-color: var(--white) !important;
   }
 }
 
@@ -869,6 +940,68 @@ p {
 .generic-table::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
   background: var(--light-grey);
+}
+
+.generic-table-paginator {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: var(--ghost-white) !important;
+  border-bottom-left-radius: var(--spacing-md) !important;
+  border-bottom-right-radius: var(--spacing-md) !important;
+  border: 1px solid var(--light-steel-blue) !important;
+  border-top: 0 !important;
+  padding: var(--spacing-smd) var(--spacing-lg) !important;
+  gap: 1.5rem;
+  min-height: 4rem;
+  .form-label {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+  button {
+    padding: 6.2px 0.875rem;
+    background-color: white;
+    cursor: pointer;
+  }
+  .last-page {
+    border-right: 1px solid #a9bcd6 !important;
+  }
+  .page-btn {
+    border: 1px solid #a9bcd6;
+    border-right: 0;
+  }
+  .prev-btn {
+    border: 1px solid #a9bcd6;
+    border-right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    img {
+      transform: rotate(90deg);
+    }
+  }
+  .next-btn {
+    border: 1px solid #a9bcd6;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+  .active-page {
+    background-color: #e2ecfb;
+    color: #161a23;
+  }
+  .ng-select.ng-select-single .ng-select-container {
+    height: 2.375rem;
+    width: 4.625rem;
+  }
+  .ng-select .ng-select-container {
+    border: 1px solid #a9bcd6 !important;
+  }
+  .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+    border-color: #a9bcd6 !important;
+  }
 }
 
 .table-paginator .mat-mdc-paginator-container {
@@ -921,10 +1054,84 @@ p {
   }
 }
 
+.bs-datepicker {
+  flex-direction: row-reverse !important;
+}
+.theme-dark-blue {
+  border-radius: 0.5rem !important;
+  background-color: var(--white) !important;
+
+  .bs-datepicker-head button.current {
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 0.875rem !important;
+    color: var(--neutral-900) !important;
+  }
+
+  .bs-datepicker-head button.previous,
+  .bs-datepicker-head button.next {
+    color: var(--neutral-900) !important;
+  }
+
+  .bs-datepicker-head {
+    background: transparent !important;
+  }
+
+  bs-days-calendar-view:first-of-type .bs-datepicker-head {
+    border-radius: 0 !important;
+    border-right: 0.0575rem solid var(--grey-10) !important;
+    border-left: 0.0575rem solid var(--grey-10) !important;
+  }
+  bs-days-calendar-view:last-of-type .bs-datepicker-head {
+    border-radius: 0 !important;
+    border-top-right-radius: 0.5rem !important;
+  }
+
+  .bs-datepicker-body table td span.selected {
+    background-color: var(--blue-500) !important;
+  }
+  .bs-datepicker-body table td,
+  .bs-datepicker-body table th {
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 0.875rem !important;
+    color: var(--neutral-900) !important;
+  }
+
+  .bs-datepicker-custom-range {
+    padding: 0.4325rem !important;
+    background: transparent !important;
+
+    .bs-datepicker-predefined-btns button {
+      background-color: var(--white) !important;
+      color: var(--grey-200) !important;
+      border: 0;
+      border-bottom: 0.125rem solid var(--neutral-50);
+      margin-bottom: 0 !important;
+      font-weight: var(--font-weight-regular);
+      font-size: 0.875rem;
+      padding: 0 1.5rem !important;
+      height: 2.76rem !important;
+    }
+
+    .bs-datepicker-predefined-btns button:hover {
+      background-color: var(--neutral-50) !important;
+      cursor: pointer;
+    }
+  }
+}
+
 .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
-  border-color: var(--neutral-200) !important;
+  border-color: var(--grey-50) !important;
   box-shadow: none !important;
 }
+
+.ng-dropdown-panel.ng-select-bottom
+  .ng-dropdown-panel-items
+  .ng-option:last-child {
+  border-bottom-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0.5rem !important;
+}
+// ---------------------------------------------------
+
 .form-control:focus {
   border-color: var(--neutral-200) !important;
   box-shadow: none !important;
