@@ -256,8 +256,24 @@
   --icon-to-display: var(--icon-search);
 }
 
-.input-icon.icon-rupee {
+.icon-rupee {
   --icon-to-display: var(--icon-rupee);
+}
+
+.icon-rupee::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 1rem;
+  height: 0.75rem;
+  background-color: var(--neutral-500);
+  -webkit-mask-image: var(--icon-to-display);
+  mask-image: var(--icon-to-display);
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
 
 .form-control {
@@ -268,7 +284,11 @@
   font-size: var(--font-size-sm);
 }
 
-.input-icon .form-control {
+.input-icon.form-control {
+  padding-left: 2.5rem;
+}
+
+.icon-rupee.form-control {
   padding-left: 2.5rem;
 }
 
@@ -441,6 +461,7 @@
   min-height: 2.25rem;
   align-items: center;
   justify-content: center;
+  background: inherit;
 }
 .ng-select .ng-select-container .ng-value-container .ng-placeholder {
   font-family: var(--font-family-base);
