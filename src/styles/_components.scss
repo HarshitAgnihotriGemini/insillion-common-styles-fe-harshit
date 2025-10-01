@@ -283,11 +283,12 @@
   border-radius: var(--radius-default);
   font-size: var(--font-size-sm);
 }
-
-.input-icon.form-control {
+.custom-icon .form-control {
   padding-left: 2.5rem;
 }
-
+.input-icon .form-control {
+  padding-left: 2.5rem;
+}
 
 .input-icon.icon-right::before {
   left: auto;
