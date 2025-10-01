@@ -283,12 +283,10 @@
   border-radius: var(--radius-default);
   font-size: var(--font-size-sm);
 }
-
-.input-icon.form-control {
+.custom-icon .form-control {
   padding-left: 2.5rem;
 }
-
-.icon-rupee.form-control {
+.input-icon .form-control {
   padding-left: 2.5rem;
 }
 
@@ -1610,3 +1608,17 @@ p {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
