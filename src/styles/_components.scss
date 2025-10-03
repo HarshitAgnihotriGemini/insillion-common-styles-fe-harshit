@@ -1251,6 +1251,10 @@ p {
   grid-template-rows: 1fr;
 }
 
+.accordion-content.overflow-visible .accordion-content-inner {
+  overflow: visible;
+}
+
 .bs-datepicker-container {
   padding: 0px !important;
 }
